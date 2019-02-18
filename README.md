@@ -1,4 +1,5 @@
 # alex-rentalcarstest
+This is a re-creation of the pick-up location search bar on www.rentalcars.com
 
 ## Project setup
 ```
@@ -24,6 +25,3 @@ npm run test
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
