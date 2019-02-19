@@ -1,10 +1,10 @@
 <template>
   <div>
     <label for="location-input">
-      Pick-up Location
+      {{ label }}
     </label>
     <div>
-      <input id="location-input" class="location-input" v-model="locationInput" placeholder="city, airport, station, region and district..."  aria-required="true" required="required" role="textbox">
+      <input id="location-input" class="location-input" v-model="locationInput" :placeholder="placeholder" aria-required="true" required="required" role="textbox">
       <div class="dropdown-container">
         <div class="dropdown" v-if="hasResults">
           <div class="dropdown--item" v-for="item in response.results.docs" :key="item.index">
@@ -34,6 +34,8 @@ export default {
   name: 'Search',
   data: () => {
     return {
+      label: 'Pick-up Location',
+      placeholder: 'city, airport, station, region and district...',
       locationInput: '',
       response: {}
     }
@@ -101,7 +103,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .location-input{
   width:100%;
